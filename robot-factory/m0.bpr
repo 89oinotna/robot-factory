@@ -1,2 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<org.eventb.core.prFile version="1"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="ARMS,BOXES,ITEMS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p6,p8,p2,p4,p12,p13,p14">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="bs" org.eventb.core.type="ℙ(BOXES×ℤ)"/>
+        <org.eventb.core.prIdent name="mb" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="w" org.eventb.core.type="ℙ(ITEMS×ℤ)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀i⦂ITEMS·w(i)≤mi"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="bs∈BOXES → ℕ"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀b⦂BOXES·b∈BOXES⇒bs(b)≥mi"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BOXES × {0}∈BOXES → ℕ"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀i⦂ITEMS·⊤⇒w(i)≤mi"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="mb≥mi"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀b⦂BOXES·b∈BOXES⇒bs(b)≤mb"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="w∈ITEMS → ℕ"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀b⦂BOXES·⊤⇒bs(b)≤mb"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="mi&gt;0"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀b⦂BOXES·bs(b)≥mi"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(ARMS)"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀b⦂BOXES·bs(b)≤mb"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀b⦂BOXES·⊤⇒bs(b)≥mi"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>
