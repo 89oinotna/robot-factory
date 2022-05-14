@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="BOXES" org.eventb.core.type="ℙ(BOXES)"/>
         <org.eventb.core.poIdentifier name="ITEMS" org.eventb.core.type="ℙ(ITEMS)"/>
@@ -37,7 +37,7 @@
     <org.eventb.core.poPredicateSet name="HYP+" org.eventb.core.parentSet="/robot-factory/c0.bpo|org.eventb.core.poFile#c0|org.eventb.core.poPredicateSet#HYP*" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀b⦂BOXES·b∈BOXES⇒bs(b)≥mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/robot-factory/c0.bpo|org.eventb.core.poFile#c0|org.eventb.core.poPredicateSet#HYP+" org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/robot-factory/c0.bpo|org.eventb.core.poFile#c0|org.eventb.core.poPredicateSet#HYP+" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀b⦂BOXES·b∈BOXES⇒bs(b)≤mb" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#4"/>
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="mb≥mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#5"/>
     </org.eventb.core.poPredicateSet>

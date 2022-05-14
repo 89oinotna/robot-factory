@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/robot-factory/c0.bcc|org.eventb.core.scContextFile#c0" org.eventb.core.source="/robot-factory/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.extendsContext#'"/>
+    <org.eventb.core.scInternalContext name="c0">
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm2" org.eventb.core.predicate="w∈ITEMS → ℕ" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm3" org.eventb.core.predicate="mi&gt;0" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm4" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="*" org.eventb.core.label="axm5" org.eventb.core.predicate="bs∈BOXES → ℕ" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#1" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="+" org.eventb.core.label="axm6" org.eventb.core.predicate="∀b⦂BOXES·b∈BOXES⇒bs(b)≥mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#2" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="," org.eventb.core.label="axm7" org.eventb.core.predicate="∀b⦂BOXES·b∈BOXES⇒bs(b)≤mb" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#4" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="-" org.eventb.core.label="axm8" org.eventb.core.predicate="mb≥mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#5" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scCarrierSet name="BOXES" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#\/" org.eventb.core.type="ℙ(BOXES)"/>
+        <org.eventb.core.scConstant name="w" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#*" org.eventb.core.type="ℙ(ITEMS×ℤ)"/>
+        <org.eventb.core.scCarrierSet name="ITEMS" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(ITEMS)"/>
+        <org.eventb.core.scConstant name="bs" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#0" org.eventb.core.type="ℙ(BOXES×ℤ)"/>
+        <org.eventb.core.scConstant name="mb" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#3" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.scConstant name="mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#," org.eventb.core.type="ℤ"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scCarrierSet name="ARMS" org.eventb.core.source="/robot-factory/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(ARMS)"/>
+</org.eventb.core.scContextFile>

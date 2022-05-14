@@ -36,7 +36,7 @@
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bw(curr_box) + w(curr_item) &gt; bs(curr_box)"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="USED ≔ USED ∪ {curr_box}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="curr_box :∈ BOXES ∖ USED" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate=" BOXES ∖ USED ≠ ∅"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="BOXES ∖ USED ≠ ∅"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="9" org.eventb.core.identifier="USED"/>
     <org.eventb.core.invariant name=";" org.eventb.core.label="inv9" org.eventb.core.predicate="finite(STORED)"/>
