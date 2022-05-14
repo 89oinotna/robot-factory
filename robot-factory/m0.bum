@@ -13,6 +13,7 @@
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="picked = FALSE"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="picked ≔ TRUE" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="curr_item :∈ ITEMS ∖ STORED  " org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="ITEMS ∖ STORED ≠ ∅"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="store_item">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bw(curr_box) + w(curr_item) ≤ bs(curr_box)"/>
@@ -30,13 +31,15 @@
     <org.eventb.core.variable name="4" org.eventb.core.identifier="picked"/>
     <org.eventb.core.invariant name="5" org.eventb.core.label="inv6" org.eventb.core.predicate="picked ∈ BOOL"/>
     <org.eventb.core.variable name="6" org.eventb.core.identifier="STORED"/>
-    <org.eventb.core.invariant name="7" org.eventb.core.label="inv7" org.eventb.core.predicate="STORED ⊂ ITEMS"/>
+    <org.eventb.core.invariant name="7" org.eventb.core.label="inv7" org.eventb.core.predicate="STORED ⊆ ITEMS"/>
     <org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="change_box">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bw(curr_box) + w(curr_item) &gt; bs(curr_box)"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="USED ≔ USED ∪ {curr_box}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="curr_box :∈ BOXES ∖ USED" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate=" BOXES ∖ USED ≠ ∅"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="9" org.eventb.core.identifier="USED"/>
     <org.eventb.core.invariant name=";" org.eventb.core.label="inv9" org.eventb.core.predicate="finite(STORED)"/>
-    <org.eventb.core.invariant name=":" org.eventb.core.label="inv8" org.eventb.core.predicate="USED ⊂ BOXES"/>
+    <org.eventb.core.invariant name=":" org.eventb.core.label="inv8" org.eventb.core.predicate="USED ⊆ BOXES"/>
+    <org.eventb.core.invariant name="=" org.eventb.core.label="inv10" org.eventb.core.predicate="finite(USED)"/>
 </org.eventb.core.machineFile>
