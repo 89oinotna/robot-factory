@@ -11,6 +11,7 @@
     <org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
         <org.eventb.core.action name="(" org.eventb.core.assignment="picked_item ≔ ARMS × ∅" org.eventb.core.label="act8"/>
         <org.eventb.core.action name="'" org.eventb.core.assignment="BUSY ≔ ∅" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="store_permission ≔ ARMS × {0}" org.eventb.core.label="act9"/>
     </org.eventb.core.event>
     <org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="pick_item">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="pick_item"/>
@@ -26,11 +27,13 @@
     <org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="store_item">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="store_item"/>
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bw(curr_box) + w(picked_item(arm)) ≤ bs(curr_box)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="store_permission(arm) = 1"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="arm ∈ BUSY"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="bw(curr_box) ≔ bw(curr_box) + w(picked_item(arm)) " org.eventb.core.label="act2"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="STORED ≔ STORED ∪ {picked_item(arm)}" org.eventb.core.label="act3"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="arm"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="picked_item(arm) ≔ ∅ " org.eventb.core.comment="how??" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="BUSY ≔ BUSY ∖ {arm}" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="store_permission(arm) ≔ 0" org.eventb.core.label="act5"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="change_box">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_box"/>
@@ -43,4 +46,14 @@
     <org.eventb.core.invariant name="@" org.eventb.core.label="inv1" org.eventb.core.predicate="BUSY⊆ARMS"/>
     <org.eventb.core.invariant name="A" org.eventb.core.label="inv2" org.eventb.core.predicate="picked_item ∈ ARMS ⇸ ITEMS∖STORED"/>
     <org.eventb.core.variable name="B" org.eventb.core.identifier="picked_item"/>
+    <org.eventb.core.variable name="C" org.eventb.core.comment="function that represents if an arm can store its item (FUN 14)" org.eventb.core.identifier="store_permission"/>
+    <org.eventb.core.invariant name="D" org.eventb.core.label="inv3" org.eventb.core.predicate="store_permission ∈ ARMS → {0,1}"/>
+    <org.eventb.core.event name="E" org.eventb.core.comment="&#9;Event to decide if an arm is allowed to store its items" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="give_permission">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="∀arm · arm ∈ ARMS ⇒ store_permission(arm) = 0 "/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="arm_aux"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="store_permission(arm_aux) ≔ 1" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="arm_aux ∈ BUSY"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="F" org.eventb.core.comment="only one arm have &#10;its store_permission equal to 1" org.eventb.core.label="inv4" org.eventb.core.predicate="(∀arm · arm∈ARMS &#10;   ⇒ store_permission(arm) = 0) ∨&#10; (∃x · ∀y · (x∈ARMS ∧ y∈ARMS ∧ x≠y)&#10;   ⇒ (store_permission(x) = 1 ∧ store_permission(y) = 0))"/>
+    <org.eventb.core.seesContext name="G" org.eventb.core.target="sum"/>
 </org.eventb.core.machineFile>
