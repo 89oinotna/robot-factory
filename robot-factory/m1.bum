@@ -55,5 +55,4 @@
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="arm_aux ∈ BUSY"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="F" org.eventb.core.comment="only one arm have &#10;its store_permission equal to 1" org.eventb.core.label="inv4" org.eventb.core.predicate="(∀arm · arm∈ARMS &#10;   ⇒ store_permission(arm) = 0) ∨&#10; (∃x · ∀y · (x∈ARMS ∧ y∈ARMS ∧ x≠y)&#10;   ⇒ (store_permission(x) = 1 ∧ store_permission(y) = 0))"/>
-    <org.eventb.core.seesContext name="G" org.eventb.core.target="sum"/>
 </org.eventb.core.machineFile>
