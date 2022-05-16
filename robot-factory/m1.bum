@@ -34,6 +34,7 @@
         <org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="store_permission(arm) = TRUE"/>
         <org.eventb.core.action name="2" org.eventb.core.assignment="store_permission(arm) ≔ FALSE" org.eventb.core.label="act4"/>
         <org.eventb.core.action name="3" org.eventb.core.assignment="BUSY ≔ BUSY ∖ {arm}" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="4" org.eventb.core.assignment="picked_item ≔ picked_item ∖ {arm ↦ picked_item(arm)}" org.eventb.core.label="act6"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="pick_item">
         <org.eventb.core.parameter name="element1" org.eventb.core.identifier="arm"/>
@@ -47,11 +48,11 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="element4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="change_box">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_box"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="∀arm·arm∈ARMS ⇒ store_permission(arm)=FALSE"/>
-        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="∀item·item∈picked_item[BUSY] ⇒ bw(curr_box) + w(item) &gt; bs(curr_box)"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="USED ≔ USED ∪ {curr_box}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="curr_box :∈ BOXES ∖ USED" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="BOXES ∖ USED ≠ ∅"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="∀arm·arm∈ARMS ⇒ store_permission(arm)=FALSE"/>
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd4" org.eventb.core.predicate="∀item·item∈picked_item[BUSY] ⇒ bw(curr_box) + w(item) &gt; bs(curr_box)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="give_permission">
         <org.eventb.core.parameter name="element1" org.eventb.core.identifier="arm_aux"/>
