@@ -65,4 +65,6 @@
     <org.eventb.core.invariant name="element8" org.eventb.core.label="inv7" org.eventb.core.predicate="∀arm·arm∈ARMS ⇒ (store_permission(arm) = TRUE ⇒ arm∈BUSY)"/>
     <org.eventb.core.invariant name="element7" org.eventb.core.label="inv6" org.eventb.core.predicate="∀arm·arm∈ARMS ⇒ (store_permission(arm)=TRUE ⇒ bw(curr_box) + w(picked_item(arm)) ≤ bs(curr_box))"/>
     <org.eventb.core.invariant name="element9" org.eventb.core.label="inv8" org.eventb.core.predicate="PICKED = picked_item[BUSY]"/>
+    <org.eventb.core.invariant name="element;" org.eventb.core.label="inv10" org.eventb.core.predicate="(ITEMS ∖ STORED) ∖ picked_item[BUSY] ≠ ∅"/>
+    <org.eventb.core.invariant name="element:" org.eventb.core.label="inv9" org.eventb.core.predicate="&#13;&#10;(∃arm·arm ∈ BUSY ∧ (store_permission(arm) = TRUE ∧ bw(curr_box) + w(picked_item(arm)) ≤ bs(curr_box))) ∨ &#13;&#10;((ITEMS ∖ STORED) ∖ picked_item[BUSY]≠ ∅ ∧ ARMS ∖ BUSY≠ ∅ ) ∨&#13;&#10;((∀item·item∈picked_item[BUSY] ⇒ bw(curr_box) + w(item) &gt; bs(curr_box)) ∧ (∀arm·arm∈ARMS ⇒ store_permission(arm)=FALSE)∧BOXES ∖ USED ≠ ∅) ∨&#13;&#10;((∀arm · arm ∈ ARMS ⇒ store_permission(arm) = FALSE) ∧ (∃arm_aux·arm_aux ∈ BUSY ∧ (bw(curr_box) + w(picked_item(arm_aux)) ≤ bs(curr_box))))"/>
 </org.eventb.core.machineFile>
