@@ -45,6 +45,7 @@
         <org.eventb.core.guard name="grd4" org.eventb.core.label="grd4" org.eventb.core.predicate="arm ∈ ARMS"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="BUSY ≔ BUSY ∪ {arm}" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="act2" org.eventb.core.assignment="picked_item(arm) ≔ item" org.eventb.core.label="act4"/>
+        <org.eventb.core.refinesEvent name="element3" org.eventb.core.target="pick_item"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="change_box">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_box"/>
@@ -63,4 +64,5 @@
     </org.eventb.core.event>
     <org.eventb.core.invariant name="element8" org.eventb.core.label="inv7" org.eventb.core.predicate="∀arm·arm∈ARMS ⇒ (store_permission(arm) = TRUE ⇒ arm∈BUSY)"/>
     <org.eventb.core.invariant name="element7" org.eventb.core.label="inv6" org.eventb.core.predicate="∀arm·arm∈ARMS ⇒ (store_permission(arm)=TRUE ⇒ bw(curr_box) + w(picked_item(arm)) ≤ bs(curr_box))"/>
+    <org.eventb.core.invariant name="element9" org.eventb.core.label="inv8" org.eventb.core.predicate="PICKED = picked_item[BUSY]"/>
 </org.eventb.core.machineFile>

@@ -16,18 +16,28 @@
         <org.eventb.core.action name=")" org.eventb.core.assignment="STORED ≔ ∅" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="curr_box :∈ BOXES" org.eventb.core.label="act4"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="USED ≔ ∅" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="PICKED ≔ ∅" org.eventb.core.label="act7"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="store_item">
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="curr_item ∈ ITEMS∖ STORED"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="curr_item ∈ PICKED"/>
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bw(curr_box) + w(curr_item) ≤ bs(curr_box)"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="bw(curr_box) ≔ bw(curr_box) + w(curr_item) " org.eventb.core.label="act2"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="STORED ≔ STORED ∪ {curr_item}" org.eventb.core.label="act3"/>
         <org.eventb.core.parameter name="," org.eventb.core.identifier="curr_item"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="PICKED ≔ PICKED ∖ {curr_item}" org.eventb.core.label="act4"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="pick_item">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="item ∈ (ITEMS ∖ STORED) ∖ PICKED"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="PICKED ≔ PICKED ∪ {item}" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="item"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="change_box">
-        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="∀item·item∈ITEMS∖STORED ⇒ bw(curr_box) + w(item) &gt; bs(curr_box)"/>
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="∀item·item∈PICKED ⇒ bw(curr_box) + w(item) &gt; bs(curr_box)"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="USED ≔ USED ∪ {curr_box}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="curr_box :∈ BOXES ∖ USED" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="BOXES ∖ USED ≠ ∅"/>
     </org.eventb.core.event>
+    <org.eventb.core.variable name="element2" org.eventb.core.identifier="PICKED"/>
+    <org.eventb.core.invariant name="element3" org.eventb.core.label="inv11" org.eventb.core.predicate="PICKED ⊆ ITEMS"/>
+    <org.eventb.core.invariant name="element4" org.eventb.core.label="inv12" org.eventb.core.predicate="PICKED ∩ STORED = ∅"/>
 </org.eventb.core.machineFile>
