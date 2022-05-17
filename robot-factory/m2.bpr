@@ -300,10 +300,10 @@
             <org.eventb.core.prIdent name="ITEMS" org.eventb.core.type="ℙ(ITEMS)"/>
             <org.eventb.core.prIdent name="PICKED" org.eventb.core.type="ℙ(ITEMS)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="change_box/act2/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="ARMS,ITEMS" org.eventb.core.psManual="true">
         <org.eventb.core.lang name="L"/>
@@ -3384,9 +3384,9 @@
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="PICKED⊆ITEMS">
             <org.eventb.core.prIdent name="PICKED" org.eventb.core.type="ℙ(ITEMS)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="store_item/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="ARMS,BOXES,ITEMS" org.eventb.core.psManual="true">
         <org.eventb.core.lang name="L"/>
