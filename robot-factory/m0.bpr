@@ -545,7 +545,8 @@
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
         <org.eventb.core.prIdent name="USED" org.eventb.core.type="ℙ(BOXES)"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BOXES ∖ USED≠(∅ ⦂ ℙ(BOXES))"/>
+        <org.eventb.core.prIdent name="curr_box" org.eventb.core.type="BOXES"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(BOXES ∖ USED) ∖ {curr_box}≠(∅ ⦂ ℙ(BOXES))"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="ITEMS">

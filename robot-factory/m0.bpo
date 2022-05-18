@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="BOXES" org.eventb.core.type="ℙ(BOXES)"/>
         <org.eventb.core.poIdentifier name="ITEMS" org.eventb.core.type="ℙ(ITEMS)"/>
@@ -137,7 +137,7 @@
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3|org.eventb.core.guard#'"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTcurr_bo\|"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="change_box/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="change_box/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPcurr_bo\|"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(USED∪{curr_box})" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#inv6"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3"/>
@@ -145,9 +145,9 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#change_box\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="change_box/act2/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="change_box/act2/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="2">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPcurr_bo\|"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BOXES ∖ USED≠(∅ ⦂ ℙ(BOXES))" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3|org.eventb.core.action#)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(BOXES ∖ USED) ∖ {curr_box}≠(∅ ⦂ ℙ(BOXES))" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3|org.eventb.core.action#)"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3|org.eventb.core.action#)"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPcurr_bo\|"/>
     </org.eventb.core.poSequent>
@@ -155,9 +155,9 @@
         <org.eventb.core.poIdentifier name="curr_box'" org.eventb.core.type="BOXES"/>
         <org.eventb.core.poIdentifier name="USED'" org.eventb.core.type="ℙ(BOXES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPcurr_bo|" org.eventb.core.parentSet="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTcurr_bo\|" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPcurr_bo|" org.eventb.core.parentSet="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTcurr_bo\|" org.eventb.core.poStamp="2">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀item⦂ITEMS·item∈PICKED⇒bw(curr_box)+w(item)&gt;bs(curr_box)" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3|org.eventb.core.guard#'"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="BOXES ∖ USED≠(∅ ⦂ ℙ(BOXES))" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(BOXES ∖ USED) ∖ {curr_box}≠(∅ ⦂ ℙ(BOXES))" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/robot-factory/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bw∈BOXES → ℕ" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#inv1"/>
