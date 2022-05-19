@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="60">
+<org.eventb.core.poFile org.eventb.core.poStamp="67">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="BOXES" org.eventb.core.type="ℙ(BOXES)"/>
         <org.eventb.core.poIdentifier name="ITEMS" org.eventb.core.type="ℙ(ITEMS)"/>
@@ -36,37 +36,37 @@
         <org.eventb.core.poPredicate name="store_permissiov" org.eventb.core.predicate="finite(USED)" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#inv6"/>
         <org.eventb.core.poPredicate name="store_permissiow" org.eventb.core.predicate="PICKED∩STORED=(∅ ⦂ ℙ(ITEMS))" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#element4"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="inv5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="inv5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈BUSY⇒(∀item⦂ITEMS·item∈ITEMS⇒arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv3"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv3"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc&gt;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ARMS,y⦂ARMS·x∈ARMS∧y∈ARMS∧y≠x⇒x∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL∧(store_permission(x)=TRUE⇒y∈dom(store_permission))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv5"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv5"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc&gt;"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="inv7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="inv7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc?"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element8"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element8"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc?"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="inv6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="inv6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc@"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL∧(store_permission(arm)=TRUE⇒curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS∧picked_item(arm)∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element7"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc@"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="inv9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="inv9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∀arm⦂ARMS·arm∈BUSY⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL∧(store_permission(arm)=TRUE⇒curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS∧picked_item(arm)∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ))∧((∃arm⦂ARMS·arm∈BUSY∧store_permission(arm)=TRUE∧bw(curr_box)+w(picked_item(arm))≤bs(curr_box))∨(∃item⦂ITEMS·item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]∧picked_item[BUSY]∪STORED∪{item}⊂ITEMS∧ARMS ∖ BUSY≠(∅ ⦂ ℙ(ARMS)))∨((∀item⦂ITEMS·item∈picked_item[BUSY]⇒curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧item∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ)∧((∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(curr_box)+w(item)&gt;bs(curr_box))⇒(∀arm⦂ARMS·arm∈ARMS⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL))∧(((∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(curr_box)+w(item)&gt;bs(curr_box))∧(∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(BOXES ∖ USED) ∖ {curr_box}≠(∅ ⦂ ℙ(BOXES)))∨((∀arm⦂ARMS·arm∈ARMS⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL)∧((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)⇒(∀arm_aux⦂ARMS·arm_aux∈BUSY⇒curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧arm_aux∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS∧picked_item(arm_aux)∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ))))))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∀arm⦂ARMS·arm∈BUSY⇒curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS∧picked_item(arm)∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ∧(bw(curr_box)+w(picked_item(arm))≤bs(curr_box)⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL))∧((∃arm⦂ARMS·arm∈BUSY⇒bw(curr_box)+w(picked_item(arm))≤bs(curr_box)∧store_permission(arm)=TRUE)∨(∃arm⦂ARMS·arm∈ARMS ∖ BUSY⇒(∃item⦂ITEMS·item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]))∨(((BUSY=ARMS∨picked_item[BUSY]=ITEMS ∖ STORED)∧(∃next_box⦂BOXES·next_box∈(BOXES ∖ USED) ∖ {curr_box})⇒(∀arm⦂ARMS·arm∈ARMS⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL)∧((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)⇒(∀item⦂ITEMS·item∈picked_item[BUSY]⇒curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧item∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ)))∧(((BUSY=ARMS∨picked_item[BUSY]=ITEMS ∖ STORED)∧(∃next_box⦂BOXES·next_box∈(BOXES ∖ USED) ∖ {curr_box})∧(∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(curr_box)+w(item)&gt;bs(curr_box)))∨((∀arm⦂ARMS·arm∈ARMS⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL)∧((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)⇒(∀arm_aux⦂ARMS·arm_aux∈BUSY⇒curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧arm_aux∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS∧picked_item(arm_aux)∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ))))))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="36">
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioo"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS))∈(∅ ⦂ ℙ(ARMS)) ↣ ITEMS ∖ (∅ ⦂ ℙ(ITEMS))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv2"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt1"/>
@@ -75,7 +75,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="36">
+    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioo"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈(∅ ⦂ ℙ(ARMS))⇒(∃item⦂ITEMS·item∈ITEMS∧((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))(arm)=item)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv3"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt1"/>
@@ -84,7 +84,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc&gt;|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="36">
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioo"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ARMS × {FALSE}∈ARMS → BOOL" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv4"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt1"/>
@@ -93,7 +93,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc&gt;|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="36">
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioo"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="¬(∃x⦂ARMS,y⦂ARMS·x∈ARMS∧y∈ARMS∧y≠x∧((ARMS × {FALSE})(x)=TRUE∧(ARMS × {FALSE})(y)=TRUE))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv5"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt1"/>
@@ -102,7 +102,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc?|org.eventb.core.poPredicate#PRD4"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="36">
+    <org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioo"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒((ARMS × {FALSE})(arm)=TRUE⇒arm∈(∅ ⦂ ℙ(ARMS)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element8"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt1"/>
@@ -111,7 +111,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc@|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="36">
+    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioo">
             <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="curr_box'∈BOXES" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element2|org.eventb.core.action#*"/>
         </org.eventb.core.poPredicateSet>
@@ -122,7 +122,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="36">
+    <org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="66">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioo"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ITEMS))=((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))[∅ ⦂ ℙ(ARMS)]" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element9"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt1"/>
@@ -131,11 +131,11 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB|org.eventb.core.poPredicate#PRD7"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="35">
+    <org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioo">
             <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="curr_box'∈BOXES" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element2|org.eventb.core.action#*"/>
         </org.eventb.core.poPredicateSet>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm⦂ARMS·arm∈(∅ ⦂ ℙ(ARMS))∧((ARMS × {FALSE})(arm)=TRUE∧(BOXES × {0})(curr_box')+w(((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))(arm))≤bs(curr_box')))∨(∃item⦂ITEMS·item∈(ITEMS ∖ (∅ ⦂ ℙ(ITEMS))) ∖ ((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))[∅ ⦂ ℙ(ARMS)]∧((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))[∅ ⦂ ℙ(ARMS)]∪(∅ ⦂ ℙ(ITEMS))∪{item}⊂ITEMS∧ARMS ∖ (∅ ⦂ ℙ(ARMS))≠(∅ ⦂ ℙ(ARMS)))∨((∀item⦂ITEMS·item∈((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))[∅ ⦂ ℙ(ARMS)]⇒(BOXES × {0})(curr_box')+w(item)&gt;bs(curr_box'))∧(∀arm⦂ARMS·arm∈ARMS⇒(ARMS × {FALSE})(arm)=FALSE)∧(BOXES ∖ (∅ ⦂ ℙ(BOXES))) ∖ {curr_box'}≠(∅ ⦂ ℙ(BOXES)))∨((∀arm⦂ARMS·arm∈ARMS⇒(ARMS × {FALSE})(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈(∅ ⦂ ℙ(ARMS))∧(BOXES × {0})(curr_box')+w(((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))(arm_aux))≤bs(curr_box')))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm⦂ARMS·arm∈(∅ ⦂ ℙ(ARMS))⇒(BOXES × {0})(curr_box')+w(((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))(arm))≤bs(curr_box')∧(ARMS × {FALSE})(arm)=TRUE)∨(∃arm⦂ARMS·arm∈ARMS ∖ (∅ ⦂ ℙ(ARMS))⇒(∃item⦂ITEMS·item∈(ITEMS ∖ (∅ ⦂ ℙ(ITEMS))) ∖ ((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))[∅ ⦂ ℙ(ARMS)]))∨(((∅ ⦂ ℙ(ARMS))=ARMS∨((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))[∅ ⦂ ℙ(ARMS)]=ITEMS ∖ (∅ ⦂ ℙ(ITEMS)))∧(∃next_box⦂BOXES·next_box∈(BOXES ∖ (∅ ⦂ ℙ(BOXES))) ∖ {curr_box'})∧(∀arm⦂ARMS·arm∈ARMS⇒(ARMS × {FALSE})(arm)=FALSE)∧(∀item⦂ITEMS·item∈((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))[∅ ⦂ ℙ(ARMS)]⇒(BOXES × {0})(curr_box')+w(item)&gt;bs(curr_box')))∨((∀arm⦂ARMS·arm∈ARMS⇒(ARMS × {FALSE})(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈(∅ ⦂ ℙ(ARMS))⇒(BOXES × {0})(curr_box')+w(((∅ ⦂ ℙ(ARMS)) × (∅ ⦂ ℙ(ITEMS)))(arm_aux))≤bs(curr_box')))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt1"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element2"/>
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
@@ -153,25 +153,25 @@
         <org.eventb.core.poIdentifier name="USED'" org.eventb.core.type="ℙ(BOXES)"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissioo" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissioo" org.eventb.core.poStamp="32"/>
-    <org.eventb.core.poSequent name="store_item/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissiop("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS∧picked_item(arm)∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.guard#'"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.guard#'"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissiop("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissiop)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.guard#1"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.guard#1"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissiop)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/curr_item/WWD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of witness" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/curr_item/WWD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of witness" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.witness#\/"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.witness#\/"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/curr_item\/WWD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="picked_item ∖ {arm ↦ picked_item(arm)}∈BUSY ∖ {arm} ↣ ITEMS ∖ (STORED∪{picked_item(arm)})" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv2"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -180,7 +180,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm0⦂ARMS·arm0∈BUSY ∖ {arm}⇒(∃item⦂ITEMS·item∈ITEMS∧(picked_item ∖ {arm ↦ picked_item(arm)})(arm0)=item)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv3"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -189,7 +189,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc&gt;|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="store_permission{arm ↦ FALSE}∈ARMS → BOOL" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv4"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -198,7 +198,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc&gt;|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="¬(∃x⦂ARMS,y⦂ARMS·x∈ARMS∧y∈ARMS∧y≠x∧((store_permission{arm ↦ FALSE})(x)=TRUE∧(store_permission{arm ↦ FALSE})(y)=TRUE))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv5"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -207,7 +207,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc?|org.eventb.core.poPredicate#PRD4"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm0⦂ARMS·arm0∈ARMS⇒((store_permission{arm ↦ FALSE})(arm0)=TRUE⇒arm0∈BUSY ∖ {arm})" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element8"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -216,7 +216,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc@|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm0⦂ARMS·arm0∈ARMS⇒((store_permission{arm ↦ FALSE})(arm0)=TRUE⇒(bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))})(curr_box)+w((picked_item ∖ {arm ↦ picked_item(arm)})(arm0))≤bs(curr_box))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -225,7 +225,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PICKED ∖ {picked_item(arm)}=(picked_item ∖ {arm ↦ picked_item(arm)})[BUSY ∖ {arm}]" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element9"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -234,16 +234,16 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB|org.eventb.core.poPredicate#PRD7"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm0⦂ARMS·arm0∈BUSY ∖ {arm}∧((store_permission{arm ↦ FALSE})(arm0)=TRUE∧(bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))})(curr_box)+w((picked_item ∖ {arm ↦ picked_item(arm)})(arm0))≤bs(curr_box)))∨(∃item⦂ITEMS·item∈(ITEMS ∖ (STORED∪{picked_item(arm)})) ∖ (picked_item ∖ {arm ↦ picked_item(arm)})[BUSY ∖ {arm}]∧(picked_item ∖ {arm ↦ picked_item(arm)})[BUSY ∖ {arm}]∪(STORED∪{picked_item(arm)})∪{item}⊂ITEMS∧ARMS ∖ (BUSY ∖ {arm})≠(∅ ⦂ ℙ(ARMS)))∨((∀item⦂ITEMS·item∈(picked_item ∖ {arm ↦ picked_item(arm)})[BUSY ∖ {arm}]⇒(bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))})(curr_box)+w(item)&gt;bs(curr_box))∧(∀arm0⦂ARMS·arm0∈ARMS⇒(store_permission{arm ↦ FALSE})(arm0)=FALSE)∧(BOXES ∖ USED) ∖ {curr_box}≠(∅ ⦂ ℙ(BOXES)))∨((∀arm0⦂ARMS·arm0∈ARMS⇒(store_permission{arm ↦ FALSE})(arm0)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY ∖ {arm}∧(bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))})(curr_box)+w((picked_item ∖ {arm ↦ picked_item(arm)})(arm_aux))≤bs(curr_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm0⦂ARMS·arm0∈BUSY ∖ {arm}⇒(bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))})(curr_box)+w((picked_item ∖ {arm ↦ picked_item(arm)})(arm0))≤bs(curr_box)∧(store_permission{arm ↦ FALSE})(arm0)=TRUE)∨(∃arm0⦂ARMS·arm0∈ARMS ∖ (BUSY ∖ {arm})⇒(∃item⦂ITEMS·item∈(ITEMS ∖ (STORED∪{picked_item(arm)})) ∖ (picked_item ∖ {arm ↦ picked_item(arm)})[BUSY ∖ {arm}]))∨((BUSY ∖ {arm}=ARMS∨(picked_item ∖ {arm ↦ picked_item(arm)})[BUSY ∖ {arm}]=ITEMS ∖ (STORED∪{picked_item(arm)}))∧(∃next_box⦂BOXES·next_box∈(BOXES ∖ USED) ∖ {curr_box})∧(∀arm0⦂ARMS·arm0∈ARMS⇒(store_permission{arm ↦ FALSE})(arm0)=FALSE)∧(∀item⦂ITEMS·item∈(picked_item ∖ {arm ↦ picked_item(arm)})[BUSY ∖ {arm}]⇒(bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))})(curr_box)+w(item)&gt;bs(curr_box)))∨((∀arm0⦂ARMS·arm0∈ARMS⇒(store_permission{arm ↦ FALSE})(arm0)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY ∖ {arm}⇒(bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))})(curr_box)+w((picked_item ∖ {arm ↦ picked_item(arm)})(arm_aux))≤bs(curr_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3"/>
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="picked_item(arm)∈PICKED" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2|org.eventb.core.guard#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -251,7 +251,7 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bw(curr_box)+w(picked_item(arm))≤bs(curr_box)" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2|org.eventb.core.guard#'"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -259,25 +259,25 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS∧picked_item(arm)∈dom(w)∧w∈ITEMS ⇸ ℤ" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.action#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.action#*"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.action#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.action#+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/act6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/act6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="arm∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.action#4"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.action#4"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/act2/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/act2/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))}=bw{curr_box ↦ bw(curr_box)+w(picked_item(arm))}" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2|org.eventb.core.action#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -285,7 +285,7 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/act2\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="store_item/act3/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="store_item/act3/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissiop"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="STORED∪{picked_item(arm)}=STORED∪{picked_item(arm)}" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2|org.eventb.core.action#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt2"/>
@@ -293,7 +293,7 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#store_item\/act3\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTstore_permissiop" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTIDENTstore_permissiop" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="67">
         <org.eventb.core.poIdentifier name="arm" org.eventb.core.type="ARMS"/>
         <org.eventb.core.poIdentifier name="BUSY'" org.eventb.core.type="ℙ(ARMS)"/>
         <org.eventb.core.poIdentifier name="PICKED'" org.eventb.core.type="ℙ(ITEMS)"/>
@@ -303,16 +303,16 @@
         <org.eventb.core.poIdentifier name="store_permission'" org.eventb.core.type="ℙ(ARMS×BOOL)"/>
         <org.eventb.core.poIdentifier name="STORED'" org.eventb.core.type="ℙ(ITEMS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissiop(" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissiop" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissiop(" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissiop" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="arm∈BUSY" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.guard#0"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissiop)" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissiop(" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissiop)" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissiop(" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bw(curr_box)+w(picked_item(arm))≤bs(curr_box)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissiop" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissiop)" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissiop" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissiop)" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="store_permission(arm)=TRUE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element3|org.eventb.core.guard#1"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="pick_item/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="60">
+    <org.eventb.core.poSequent name="pick_item/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioq"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="picked_item{arm ↦ item}∈BUSY∪{arm} ↣ ITEMS ∖ STORED" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv2"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#element5"/>
@@ -321,7 +321,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#pick_item\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc;|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="pick_item/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="60">
+    <org.eventb.core.poSequent name="pick_item/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioq"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm0⦂ARMS·arm0∈BUSY∪{arm}⇒(∃item0⦂ITEMS·item0∈ITEMS∧(picked_item{arm ↦ item})(arm0)=item0)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv3"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#element5"/>
@@ -330,7 +330,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#pick_item\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc&gt;|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="pick_item/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="60">
+    <org.eventb.core.poSequent name="pick_item/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioq"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm0⦂ARMS·arm0∈ARMS⇒(store_permission(arm0)=TRUE⇒arm0∈BUSY∪{arm})" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element8"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#element5"/>
@@ -339,7 +339,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#pick_item\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc@|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="pick_item/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="60">
+    <org.eventb.core.poSequent name="pick_item/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioq"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm0⦂ARMS·arm0∈ARMS⇒(store_permission(arm0)=TRUE⇒bw(curr_box)+w((picked_item{arm ↦ item})(arm0))≤bs(curr_box))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#element5"/>
@@ -348,7 +348,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#pick_item\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="pick_item/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="60">
+    <org.eventb.core.poSequent name="pick_item/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioq"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PICKED∪{item}=(picked_item{arm ↦ item})[BUSY∪{arm}]" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element9"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#element5"/>
@@ -357,16 +357,16 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#pick_item\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB|org.eventb.core.poPredicate#PRD7"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="pick_item/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="60">
+    <org.eventb.core.poSequent name="pick_item/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioq"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm0⦂ARMS·arm0∈BUSY∪{arm}∧(store_permission(arm0)=TRUE∧bw(curr_box)+w((picked_item{arm ↦ item})(arm0))≤bs(curr_box)))∨(∃item0⦂ITEMS·item0∈(ITEMS ∖ STORED) ∖ (picked_item{arm ↦ item})[BUSY∪{arm}]∧(picked_item{arm ↦ item})[BUSY∪{arm}]∪STORED∪{item0}⊂ITEMS∧ARMS ∖ (BUSY∪{arm})≠(∅ ⦂ ℙ(ARMS)))∨((∀item0⦂ITEMS·item0∈(picked_item{arm ↦ item})[BUSY∪{arm}]⇒bw(curr_box)+w(item0)&gt;bs(curr_box))∧(∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(BOXES ∖ USED) ∖ {curr_box}≠(∅ ⦂ ℙ(BOXES)))∨((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY∪{arm}∧bw(curr_box)+w((picked_item{arm ↦ item})(arm_aux))≤bs(curr_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm0⦂ARMS·arm0∈BUSY∪{arm}⇒bw(curr_box)+w((picked_item{arm ↦ item})(arm0))≤bs(curr_box)∧store_permission(arm0)=TRUE)∨(∃arm0⦂ARMS·arm0∈ARMS ∖ (BUSY∪{arm})⇒(∃item0⦂ITEMS·item0∈(ITEMS ∖ STORED) ∖ (picked_item{arm ↦ item})[BUSY∪{arm}]))∨((BUSY∪{arm}=ARMS∨(picked_item{arm ↦ item})[BUSY∪{arm}]=ITEMS ∖ STORED)∧(∃next_box⦂BOXES·next_box∈(BOXES ∖ USED) ∖ {curr_box})∧(∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∀item0⦂ITEMS·item0∈(picked_item{arm ↦ item})[BUSY∪{arm}]⇒bw(curr_box)+w(item0)&gt;bs(curr_box)))∨((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY∪{arm}⇒bw(curr_box)+w((picked_item{arm ↦ item})(arm_aux))≤bs(curr_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#element5"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element6"/>
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#pick_item\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="pick_item/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="60">
+    <org.eventb.core.poSequent name="pick_item/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissioq"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="item∈(ITEMS ∖ STORED) ∖ PICKED" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#element5|org.eventb.core.guard#'"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#element5"/>
@@ -374,30 +374,30 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element6"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#pick_item\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTstore_permissioq" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTIDENTstore_permissioq" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="67">
         <org.eventb.core.poIdentifier name="arm" org.eventb.core.type="ARMS"/>
         <org.eventb.core.poIdentifier name="BUSY'" org.eventb.core.type="ℙ(ARMS)"/>
         <org.eventb.core.poIdentifier name="PICKED'" org.eventb.core.type="ℙ(ITEMS)"/>
         <org.eventb.core.poIdentifier name="item" org.eventb.core.type="ITEMS"/>
         <org.eventb.core.poIdentifier name="picked_item'" org.eventb.core.type="ℙ(ARMS×ITEMS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissioq" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissioq" org.eventb.core.poStamp="60">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element6|org.eventb.core.guard#grd2"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arm∈ARMS ∖ BUSY" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element6|org.eventb.core.guard#grd4"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissioq" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissioq" org.eventb.core.poStamp="67">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="arm∈ARMS ∖ BUSY" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element6|org.eventb.core.guard#grd4"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element6|org.eventb.core.guard#grd2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="change_box/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="change_box/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissior)"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4|org.eventb.core.guard#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4|org.eventb.core.guard#+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissior)"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="change_box/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="change_box/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissior*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀item⦂ITEMS·item∈picked_item[BUSY]⇒curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧item∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4|org.eventb.core.guard#'"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4|org.eventb.core.guard#'"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissior*"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="change_box/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="change_box/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissior"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒(store_permission(arm)=TRUE⇒bw(next_box)+w(picked_item(arm))≤bs(next_box))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3"/>
@@ -406,16 +406,16 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#change_box\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="change_box/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="change_box/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissior"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm⦂ARMS·arm∈BUSY∧(store_permission(arm)=TRUE∧bw(next_box)+w(picked_item(arm))≤bs(next_box)))∨(∃item⦂ITEMS·item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]∧picked_item[BUSY]∪STORED∪{item}⊂ITEMS∧ARMS ∖ BUSY≠(∅ ⦂ ℙ(ARMS)))∨((∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(next_box)+w(item)&gt;bs(next_box))∧(∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(BOXES ∖ (USED∪{curr_box})) ∖ {next_box}≠(∅ ⦂ ℙ(BOXES)))∨((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY∧bw(next_box)+w(picked_item(arm_aux))≤bs(next_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm⦂ARMS·arm∈BUSY⇒bw(next_box)+w(picked_item(arm))≤bs(next_box)∧store_permission(arm)=TRUE)∨(∃arm⦂ARMS·arm∈ARMS ∖ BUSY⇒(∃item⦂ITEMS·item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]))∨((BUSY=ARMS∨picked_item[BUSY]=ITEMS ∖ STORED)∧(∃next_box0⦂BOXES·next_box0∈(BOXES ∖ (USED∪{curr_box})) ∖ {next_box})∧(∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(next_box)+w(item)&gt;bs(next_box)))∨((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY⇒bw(next_box)+w(picked_item(arm_aux))≤bs(next_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4"/>
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#change_box\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="change_box/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="change_box/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissior"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀item⦂ITEMS·item∈PICKED⇒bw(curr_box)+w(item)&gt;bs(curr_box)" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3|org.eventb.core.guard#'"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#evt3"/>
@@ -423,34 +423,34 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#change_box\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTstore_permissior" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTIDENTstore_permissior" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="67">
         <org.eventb.core.poIdentifier name="next_box" org.eventb.core.type="BOXES"/>
         <org.eventb.core.poIdentifier name="curr_box'" org.eventb.core.type="BOXES"/>
         <org.eventb.core.poIdentifier name="USED'" org.eventb.core.type="ℙ(BOXES)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissior)" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissior" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissior)" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissior" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BUSY=ARMS∨picked_item[BUSY]=ITEMS ∖ STORED" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="next_box∈(BOXES ∖ USED) ∖ {curr_box}" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4|org.eventb.core.guard#-"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissior*" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissior)" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissior*" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissior)" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissior" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissior*" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissior" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissior*" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(curr_box)+w(item)&gt;bs(curr_box)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element4|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="give_permission/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="give_permission/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissios"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒arm∈dom(store_permission)∧store_permission∈ARMS ⇸ BOOL" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissios"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="give_permission/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="give_permission/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissios("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="curr_box∈dom(bw)∧bw∈BOXES ⇸ ℤ∧arm_aux∈dom(picked_item)∧picked_item∈ARMS ⇸ ITEMS∧picked_item(arm_aux)∈dom(w)∧w∈ITEMS ⇸ ℤ∧curr_box∈dom(bs)∧bs∈BOXES ⇸ ℤ" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5|org.eventb.core.guard#element2"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5|org.eventb.core.guard#element2"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissios("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="give_permission/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="give_permission/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissios"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="store_permission{arm_aux ↦ TRUE}∈ARMS → BOOL" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv4"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5"/>
@@ -458,7 +458,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#give_permission\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc&gt;|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="give_permission/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="give_permission/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissios"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="¬(∃x⦂ARMS,y⦂ARMS·x∈ARMS∧y∈ARMS∧y≠x∧((store_permission{arm_aux ↦ TRUE})(x)=TRUE∧(store_permission{arm_aux ↦ TRUE})(y)=TRUE))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#inv5"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5"/>
@@ -466,7 +466,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#give_permission\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc?|org.eventb.core.poPredicate#PRD4"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="give_permission/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="give_permission/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissios"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒((store_permission{arm_aux ↦ TRUE})(arm)=TRUE⇒arm∈BUSY)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element8"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5"/>
@@ -474,7 +474,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#give_permission\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc@|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="give_permission/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="give_permission/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissios"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒((store_permission{arm_aux ↦ TRUE})(arm)=TRUE⇒bw(curr_box)+w(picked_item(arm))≤bs(curr_box))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5"/>
@@ -482,23 +482,23 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#give_permission\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="give_permission/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+    <org.eventb.core.poSequent name="give_permission/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTALLHYPstore_permissios"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm⦂ARMS·arm∈BUSY∧((store_permission{arm_aux ↦ TRUE})(arm)=TRUE∧bw(curr_box)+w(picked_item(arm))≤bs(curr_box)))∨(∃item⦂ITEMS·item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]∧picked_item[BUSY]∪STORED∪{item}⊂ITEMS∧ARMS ∖ BUSY≠(∅ ⦂ ℙ(ARMS)))∨((∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(curr_box)+w(item)&gt;bs(curr_box))∧(∀arm⦂ARMS·arm∈ARMS⇒(store_permission{arm_aux ↦ TRUE})(arm)=FALSE)∧(BOXES ∖ USED) ∖ {curr_box}≠(∅ ⦂ ℙ(BOXES)))∨((∀arm⦂ARMS·arm∈ARMS⇒(store_permission{arm_aux ↦ TRUE})(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY∧bw(curr_box)+w(picked_item(arm_aux))≤bs(curr_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃arm⦂ARMS·arm∈BUSY⇒bw(curr_box)+w(picked_item(arm))≤bs(curr_box)∧(store_permission{arm_aux ↦ TRUE})(arm)=TRUE)∨(∃arm⦂ARMS·arm∈ARMS ∖ BUSY⇒(∃item⦂ITEMS·item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]))∨((BUSY=ARMS∨picked_item[BUSY]=ITEMS ∖ STORED)∧(∃next_box⦂BOXES·next_box∈(BOXES ∖ USED) ∖ {curr_box})∧(∀arm⦂ARMS·arm∈ARMS⇒(store_permission{arm_aux ↦ TRUE})(arm)=FALSE)∧(∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(curr_box)+w(item)&gt;bs(curr_box)))∨((∀arm⦂ARMS·arm∈ARMS⇒(store_permission{arm_aux ↦ TRUE})(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY⇒bw(curr_box)+w(picked_item(arm_aux))≤bs(curr_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poSequent#give_permission\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTstore_permissios" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTIDENTstore_permissios" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="67">
         <org.eventb.core.poIdentifier name="store_permission'" org.eventb.core.type="ℙ(ARMS×BOOL)"/>
         <org.eventb.core.poIdentifier name="arm_aux" org.eventb.core.type="ARMS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissios(" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissios" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTHYPstore_permissios(" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTIDENTstore_permissios" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arm_aux∈BUSY" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5|org.eventb.core.guard#grd2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissios" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissios(" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPstore_permissios" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#EVTHYPstore_permissios(" org.eventb.core.poStamp="67">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="bw(curr_box)+w(picked_item(arm_aux))≤bs(curr_box)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#element5|org.eventb.core.guard#element2"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="HYPc;" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="59">
@@ -515,11 +515,11 @@
     <org.eventb.core.poPredicateSet name="HYPc@" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc?" org.eventb.core.poStamp="59">
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒(store_permission(arm)=TRUE⇒arm∈BUSY)" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element8"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPcB" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc@" org.eventb.core.poStamp="59">
+    <org.eventb.core.poPredicateSet name="HYPcB" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPc@" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀arm⦂ARMS·arm∈ARMS⇒(store_permission(arm)=TRUE⇒bw(curr_box)+w(picked_item(arm))≤bs(curr_box))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element7"/>
         <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="PICKED=picked_item[BUSY]" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element9"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB" org.eventb.core.poStamp="59">
-        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="(∃arm⦂ARMS·arm∈BUSY∧(store_permission(arm)=TRUE∧bw(curr_box)+w(picked_item(arm))≤bs(curr_box)))∨(∃item⦂ITEMS·item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]∧picked_item[BUSY]∪STORED∪{item}⊂ITEMS∧ARMS ∖ BUSY≠(∅ ⦂ ℙ(ARMS)))∨((∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(curr_box)+w(item)&gt;bs(curr_box))∧(∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(BOXES ∖ USED) ∖ {curr_box}≠(∅ ⦂ ℙ(BOXES)))∨((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY∧bw(curr_box)+w(picked_item(arm_aux))≤bs(curr_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/robot-factory/m1.bpo|org.eventb.core.poFile#m1|org.eventb.core.poPredicateSet#HYPcB" org.eventb.core.poStamp="67">
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="(∃arm⦂ARMS·arm∈BUSY⇒bw(curr_box)+w(picked_item(arm))≤bs(curr_box)∧store_permission(arm)=TRUE)∨(∃arm⦂ARMS·arm∈ARMS ∖ BUSY⇒(∃item⦂ITEMS·item∈(ITEMS ∖ STORED) ∖ picked_item[BUSY]))∨((BUSY=ARMS∨picked_item[BUSY]=ITEMS ∖ STORED)∧(∃next_box⦂BOXES·next_box∈(BOXES ∖ USED) ∖ {curr_box})∧(∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∀item⦂ITEMS·item∈picked_item[BUSY]⇒bw(curr_box)+w(item)&gt;bs(curr_box)))∨((∀arm⦂ARMS·arm∈ARMS⇒store_permission(arm)=FALSE)∧(∃arm_aux⦂ARMS·arm_aux∈BUSY⇒bw(curr_box)+w(picked_item(arm_aux))≤bs(curr_box)))" org.eventb.core.source="/robot-factory/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#element:"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
