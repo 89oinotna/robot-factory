@@ -6,11 +6,6 @@
     <org.eventb.core.constant name="," org.eventb.core.comment="max item weight" org.eventb.core.identifier="mi"/>
     <org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="mi &gt; 0"/>
     <org.eventb.core.axiom name="." org.eventb.core.comment="FUN 5" org.eventb.core.label="axm4" org.eventb.core.predicate="∀i·i∈ITEMS ⇒ w(i) ≤ mi"/>
-    <org.eventb.core.carrierSet name="/" org.eventb.core.identifier="BOXES"/>
-    <org.eventb.core.constant name="0" org.eventb.core.comment="box space" org.eventb.core.identifier="bs"/>
-    <org.eventb.core.axiom name="1" org.eventb.core.label="axm5" org.eventb.core.predicate="bs ∈ BOXES → ℕ"/>
-    <org.eventb.core.axiom name="2" org.eventb.core.comment="FUN 7" org.eventb.core.label="axm6" org.eventb.core.predicate="∀b·b∈BOXES ⇒ bs(b) ≥ mi"/>
     <org.eventb.core.constant name="3" org.eventb.core.comment="max box space" org.eventb.core.identifier="mb"/>
-    <org.eventb.core.axiom name="4" org.eventb.core.comment="FUN 6" org.eventb.core.label="axm7" org.eventb.core.predicate="∀b·b∈BOXES ⇒ bs(b) ≤ mb"/>
     <org.eventb.core.axiom name="5" org.eventb.core.label="axm8" org.eventb.core.predicate="mb ≥ mi"/>
 </org.eventb.core.contextFile>
