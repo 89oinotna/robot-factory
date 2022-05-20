@@ -4,13 +4,11 @@
     <org.eventb.core.seesContext name="element1" org.eventb.core.target="c1"/>
     <org.eventb.core.variable name="var1" org.eventb.core.comment="box weight" org.eventb.core.identifier="bw"/>
     <org.eventb.core.variable name="elementB" org.eventb.core.identifier="bs"/>
-    <org.eventb.core.variable name="var5" org.eventb.core.identifier="STORED"/>
     <org.eventb.core.variable name="var7" org.eventb.core.comment="arms with an item" org.eventb.core.identifier="BUSY"/>
     <org.eventb.core.variable name="var8" org.eventb.core.identifier="picked_item"/>
     <org.eventb.core.variable name="var9" org.eventb.core.comment="function that represents if an arm can store its item (FUN 14)" org.eventb.core.identifier="store_permission"/>
     <org.eventb.core.event name="element2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
         <org.eventb.core.action name="internal1" org.eventb.core.assignment="bw ≔ 0" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="STORED ≔ ∅" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="." org.eventb.core.assignment="bs :∈ mi‥mb" org.eventb.core.label="act8"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="BUSY ≔ ∅" org.eventb.core.label="act7"/>
         <org.eventb.core.action name="act2" org.eventb.core.assignment="picked_item ≔ ∅ × ∅" org.eventb.core.label="act10"/>
@@ -18,18 +16,17 @@
         <org.eventb.core.action name="'" org.eventb.core.assignment="box_ready ≔ TRUE" org.eventb.core.label="act11"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="store_box">
-        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="(BUSY = ARMS) ∨ (picked_item[BUSY] = ITEMS ∖ STORED)"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="(BUSY = ARMS)"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="box_ready ≔ FALSE" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="box_ready = TRUE"/>
-        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd6" org.eventb.core.predicate="∀item·item∈picked_item[BUSY] ⇒ bw + w(item) &gt; bs"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd6" org.eventb.core.predicate="∀item·item∈picked_item[BUSY] ⇒ bw + item &gt; bs"/>
         <org.eventb.core.guard name="grd3" org.eventb.core.label="grd3" org.eventb.core.predicate="∀arm·arm∈ARMS ⇒ store_permission(arm)=FALSE"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="store_item">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="store_item"/>
         <org.eventb.core.guard name="0" org.eventb.core.label="grd3" org.eventb.core.predicate="arm ∈ BUSY"/>
-        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bw + w(picked_item(arm)) ≤ bs"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="bw ≔ bw + w(picked_item(arm)) " org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="STORED ≔ STORED ∪ {picked_item(arm)}" org.eventb.core.label="act3"/>
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="bw + picked_item(arm) ≤ bs"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="bw ≔ bw + picked_item(arm) " org.eventb.core.label="act2"/>
         <org.eventb.core.parameter name="." org.eventb.core.identifier="arm"/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="store_permission(arm) = TRUE"/>
         <org.eventb.core.action name="2" org.eventb.core.assignment="store_permission(arm) ≔ FALSE" org.eventb.core.label="act4"/>
@@ -53,13 +50,13 @@
         <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="∀arm · arm ∈ ARMS ⇒ store_permission(arm) = FALSE "/>
         <org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="arm_aux ∈ BUSY"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="store_permission(arm_aux) ≔ TRUE" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="element2" org.eventb.core.label="grd3" org.eventb.core.predicate="bw + w(picked_item(arm_aux)) ≤ bs"/>
+        <org.eventb.core.guard name="element2" org.eventb.core.label="grd3" org.eventb.core.predicate="bw + picked_item(arm_aux) ≤ bs"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="box_ready = TRUE"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="element7" org.eventb.core.identifier="box_ready"/>
     <org.eventb.core.invariant name="element9" org.eventb.core.label="inv1" org.eventb.core.predicate="box_ready ∈ BOOL"/>
     <org.eventb.core.invariant name="element?" org.eventb.core.label="inv6" org.eventb.core.predicate="box_ready = FALSE ⇒ (∀arm·arm∈ARMS ⇒ store_permission(arm)=FALSE)"/>
-    <org.eventb.core.invariant name="element@" org.eventb.core.label="inv7" org.eventb.core.predicate="box_ready = FALSE ⇒ (BUSY = ARMS) ∨ picked_item[BUSY] = ITEMS ∖ STORED"/>
-    <org.eventb.core.invariant name="elementA" org.eventb.core.label="inv8" org.eventb.core.predicate="box_ready = FALSE ⇒ (∀item·item∈picked_item[BUSY] ⇒ bw + w(item) &gt; bs)"/>
-    <org.eventb.core.invariant name="element;" org.eventb.core.label="inv3" org.eventb.core.predicate="(  ((BUSY = ARMS) ∨ (picked_item[BUSY] = ITEMS ∖ STORED)) ∧ (box_ready = TRUE) ∧(∀item · item ∈ picked_item[BUSY] ⇒ bw + w(item) &gt; bs) ∧ (∀arm · arm ∈ ARMS ⇒ store_permission(arm)=FALSE) ) ∨ &#13;&#10;( ∃arm · arm ∈ BUSY ⇒ ((bw + w(picked_item(arm)) ≤ bs) ∧ (store_permission(arm) = TRUE)) ∧ (box_ready = TRUE)) ∨&#13;&#10;( ∃arm · arm ∈ ARMS∖BUSY ⇒ (∃item · item ∈ (ITEMS ∖ STORED) ∖ picked_item[BUSY])  ) ∨ &#13;&#10;((box_ready = FALSE) ) ∨ &#13;&#10;( (∀arm · arm ∈ ARMS ⇒ store_permission(arm) = FALSE) ∧ (∃arm_aux · arm_aux ∈ BUSY ⇒  bw + w(picked_item(arm_aux)) ≤ bs) ∧ (box_ready = TRUE) )" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="element@" org.eventb.core.label="inv7" org.eventb.core.predicate="box_ready = FALSE ⇒ (BUSY = ARMS)"/>
+    <org.eventb.core.invariant name="elementA" org.eventb.core.label="inv8" org.eventb.core.predicate="box_ready = FALSE ⇒ (∀item·item∈picked_item[BUSY] ⇒ bw + item &gt; bs)"/>
+    <org.eventb.core.invariant name="element;" org.eventb.core.label="inv3" org.eventb.core.predicate="(  (BUSY = ARMS) ∧ (box_ready = TRUE) ∧(∀item · item ∈ picked_item[BUSY] ⇒ bw + w(item) &gt; bs) ∧ (∀arm · arm ∈ ARMS ⇒ store_permission(arm)=FALSE) ) ∨ &#13;&#10;( ∃arm · arm ∈ BUSY ∧ ((bw + w(picked_item(arm)) ≤ bs) ∧ (store_permission(arm) = TRUE)) ∧ (box_ready = TRUE)) ∨&#13;&#10;( ∃arm · arm ∈ ARMS∖BUSY ∧ (∃item · item ∈ 1‥mi  ) ∨ &#13;&#10;((box_ready = FALSE) ) ∨ &#13;&#10;( (∀arm · arm ∈ ARMS ⇒ store_permission(arm) = FALSE) ∧ (∃arm_aux · arm_aux ∈ BUSY ∧  bw + w(picked_item(arm_aux)) ≤ bs) ∧ (box_ready = TRUE) )aux · arm_aux ∈ BUSY ∧  bw + w(picked_ite" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>
