@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
         <org.eventb.core.poIdentifier name="ITEMS" org.eventb.core.type="ℙ(ITEMS)"/>
         <org.eventb.core.poIdentifier name="w" org.eventb.core.type="ℙ(ITEMS×ℤ)"/>
         <org.eventb.core.poIdentifier name="mb" org.eventb.core.type="ℤ"/>
         <org.eventb.core.poIdentifier name="mi" org.eventb.core.type="ℤ"/>
-        <org.eventb.core.poPredicate name="ITEMT" org.eventb.core.predicate="w∈ITEMS → ℕ" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#+"/>
+        <org.eventb.core.poPredicate name="ITEMT" org.eventb.core.predicate="w∈ITEMS → ℕ ∖ {0}" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#+"/>
         <org.eventb.core.poPredicate name="ITEMU" org.eventb.core.predicate="mi&gt;0" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#-"/>
         <org.eventb.core.poPredicate name="ITEMV" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#."/>
         <org.eventb.core.poPredicate name="ITEMW" org.eventb.core.predicate="mb≥mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#5"/>
         <org.eventb.core.poIdentifier name="ARMS" org.eventb.core.type="ℙ(ARMS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/robot-factory/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/robot-factory/c1.bpo|org.eventb.core.poFile#c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(ARMS)" org.eventb.core.source="/robot-factory/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

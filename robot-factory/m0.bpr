@@ -148,7 +148,7 @@
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="curr_item∈dom(w)∧w∈ITEMS ⇸ ℤ"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="curr_item∈dom(w)"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="w∈ITEMS ⇸ ℤ"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="w∈ITEMS → ℕ"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="w∈ITEMS → ℕ ∖ {0}"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi">
             <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
         </org.eventb.core.prPred>
@@ -157,12 +157,12 @@
             <org.eventb.core.prIdent name="PICKED" org.eventb.core.type="ℙ(ITEMS)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="ITEMS"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
         <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="store_item/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="BOXES,ITEMS">
         <org.eventb.core.lang name="L"/>
@@ -246,68 +246,27 @@
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="store_item/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="ITEMS">
+    <org.eventb.core.prProof name="store_item/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="ITEMS">
         <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
-                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p1">
-                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
-                                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
-                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-                                            </org.eventb.core.prAnte>
-                                        </org.eventb.core.prRule>
-                                    </org.eventb.core.prAnte>
-                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-                                    <org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
-                                </org.eventb.core.prRule>
-                            </org.eventb.core.prAnte>
-                            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p10">
-                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p1"/>
-                            </org.eventb.core.prAnte>
-                        </org.eventb.core.prRule>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
         <org.eventb.core.prIdent name="curr_item" org.eventb.core.type="ITEMS"/>
         <org.eventb.core.prIdent name="w" org.eventb.core.type="ℙ(ITEMS×ℤ)"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="STORED⊆ITEMS">
-            <org.eventb.core.prIdent name="STORED" org.eventb.core.type="ℙ(ITEMS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀i⦂ITEMS·w(i)≤mi">
-            <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀i⦂ITEMS·⊤⇒w(i)≤mi">
-            <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
-        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤∧⊤"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="curr_item∈dom(w)∧w∈ITEMS ⇸ ℤ"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="curr_item∈dom(w)"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="w∈ITEMS ⇸ ℤ"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="w∈ITEMS → ℕ"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi">
-            <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="curr_item∈ITEMS"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="PICKED⊆ITEMS">
-            <org.eventb.core.prIdent name="PICKED" org.eventb.core.type="ℙ(ITEMS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prExpr name="e0" org.eventb.core.expression="ITEMS"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="curr_item∈dom(w)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="w∈ITEMS ⇸ ℤ"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="change_box/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="item" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="ITEMS">
         <org.eventb.core.lang name="L"/>
@@ -368,7 +327,6 @@
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀i⦂ITEMS·⊤⇒w(i)≤mi">
             <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="w∈ITEMS → ℕ"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="item∈dom(w)">
             <org.eventb.core.prIdent name="item" org.eventb.core.type="ITEMS"/>
         </org.eventb.core.prPred>
@@ -377,6 +335,7 @@
             <org.eventb.core.prIdent name="item" org.eventb.core.type="ITEMS"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="w∈ITEMS ⇸ ℤ"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="w∈ITEMS → ℕ ∖ {0}"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi">
             <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
         </org.eventb.core.prPred>
@@ -385,14 +344,14 @@
             <org.eventb.core.prIdent name="item" org.eventb.core.type="ITEMS"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="ITEMS"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
         <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
         <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="change_box/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="BOXES">
         <org.eventb.core.lang name="L"/>
@@ -620,17 +579,17 @@
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀i⦂ITEMS·⊤⇒w(i)≤mi"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(PICKED∪{item})∩STORED=(∅ ⦂ ℙ(ITEMS))"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="mb≥mi"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="w∈ITEMS → ℕ"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="mi&gt;0"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="item∈(ITEMS ∖ STORED) ∖ PICKED"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="PICKED∩STORED=(∅ ⦂ ℙ(ITEMS))"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bw≥0"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(PICKED)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="w∈ITEMS → ℕ ∖ {0}"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="PICKED⊆ITEMS"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="ITEMS">
         <org.eventb.core.lang name="L"/>
@@ -805,17 +764,17 @@
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="store_item/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="ITEMS">
+    <org.eventb.core.prProof name="store_item/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="ITEMS">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p16"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p10,p6,p4,p5,p2,p7,p3,p1,p14">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p12,p5,p4,p3,p8,p1,p9,p7,p6,p2,p10,p11,p17">
                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -830,24 +789,27 @@
         <org.eventb.core.prIdent name="mb" org.eventb.core.type="ℤ"/>
         <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
         <org.eventb.core.prIdent name="w" org.eventb.core.type="ℙ(ITEMS×ℤ)"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(STORED)"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="STORED⊆ITEMS"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀i⦂ITEMS·w(i)≤mi"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(STORED)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="bw+w(curr_item)≤bs"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="STORED⊆ITEMS"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀i⦂ITEMS·w(i)≤mi"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(PICKED ∖ {curr_item})"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bs∈mi ‥ mb"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀i⦂ITEMS·⊤⇒w(i)≤mi"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="mb≥mi"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="w∈ITEMS → ℕ"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="mi&gt;0"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="curr_item∈PICKED"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="PICKED∩STORED=(∅ ⦂ ℙ(ITEMS))"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bw≥0"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(PICKED)"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="PICKED⊆ITEMS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bs∈mi ‥ mb"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀i⦂ITEMS·⊤⇒w(i)≤mi"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="mb≥mi"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="mi&gt;0"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="curr_item∈PICKED"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="PICKED∩STORED=(∅ ⦂ ℙ(ITEMS))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="bw≥0"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="finite(PICKED)"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="curr_item∈dom(w)"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="w∈ITEMS ⇸ ℤ"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="w∈ITEMS → ℕ ∖ {0}"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="PICKED⊆ITEMS"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="inv13/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="ITEMS">
         <org.eventb.core.lang name="L"/>
@@ -1407,17 +1369,17 @@
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="store_item/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12" org.eventb.core.prSets="ITEMS">
+    <org.eventb.core.prProof name="store_item/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="ITEMS">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p15"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p16"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p12,p6,p4,p5,p2,p7,p3,p1,p8,p9,p16">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p12,p5,p4,p3,p8,p1,p9,p7,p6,p2,p10,p11,p17">
                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -1432,26 +1394,27 @@
         <org.eventb.core.prIdent name="mb" org.eventb.core.type="ℤ"/>
         <org.eventb.core.prIdent name="mi" org.eventb.core.type="ℤ"/>
         <org.eventb.core.prIdent name="w" org.eventb.core.type="ℙ(ITEMS×ℤ)"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(STORED)"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="STORED⊆ITEMS"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀i⦂ITEMS·w(i)≤mi"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bs∈mi ‥ mb"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀i⦂ITEMS·⊤⇒w(i)≤mi"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="mb≥mi"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="w∈ITEMS → ℕ"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="mi&gt;0"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(STORED)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="bw+w(curr_item)≤bs"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="STORED⊆ITEMS"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀i⦂ITEMS·w(i)≤mi"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bs∈mi ‥ mb"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀i⦂ITEMS·⊤⇒w(i)≤mi"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="mb≥mi"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="mi&gt;0"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="bw+w(curr_item)≥0"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="curr_item∈PICKED"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="PICKED∩STORED=(∅ ⦂ ℙ(ITEMS))"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bw≥0"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(PICKED)"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="curr_item∈dom(w)"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="w∈ITEMS ⇸ ℤ"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="PICKED⊆ITEMS"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="curr_item∈PICKED"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="PICKED∩STORED=(∅ ⦂ ℙ(ITEMS))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="bw≥0"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="finite(PICKED)"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="curr_item∈dom(w)"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="w∈ITEMS ⇸ ℤ"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="w∈ITEMS → ℕ ∖ {0}"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="PICKED⊆ITEMS"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="pick_item/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="ITEMS">
         <org.eventb.core.lang name="L"/>

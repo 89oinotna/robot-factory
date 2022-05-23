@@ -2,7 +2,7 @@
 <org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
     <org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/robot-factory/c0.bcc" org.eventb.core.source="/robot-factory/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.seesContext#element1"/>
     <org.eventb.core.scInternalContext name="c0">
-        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm2" org.eventb.core.predicate="w∈ITEMS → ℕ" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm2" org.eventb.core.predicate="w∈ITEMS → ℕ ∖ {0}" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
         <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm3" org.eventb.core.predicate="mi&gt;0" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
         <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm4" org.eventb.core.predicate="∀i⦂ITEMS·i∈ITEMS⇒w(i)≤mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
         <org.eventb.core.scAxiom name="*" org.eventb.core.label="axm8" org.eventb.core.predicate="mb≥mi" org.eventb.core.source="/robot-factory/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#5" org.eventb.core.theorem="false"/>
